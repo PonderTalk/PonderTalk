@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe9e9;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .scroll-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .top-nav {
+            overflow: hidden;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+        }
+
+        .top-nav img {
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-nav a {
+            color: #3e0733;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .top-nav .about-button {
+            background-color: #ce5571;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .search-bar-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-nav input[type="text"] {
+            padding: 6px;
+            border: 1px solid rebeccapurple;
+            border-radius: 6px;
+            width: 200px;
+        }
+
+        .search-bar-container button {
+            background-color: #ce5571;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        header {
+            background-color: #ffe9e9;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            height: 100px;
+        }
+
+        header p {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        header button {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        header button a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .banner {
+            background-size: 20rem;
+            background-position: center;
+            padding: 100px 20px;
+            color: rgb(171, 18, 69);
+            text-align: center;
+            box-shadow: 0 4px 8px rgb(112, 2, 2);
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 50px;
+        }
+
+        .banner p {
+            font-size: 24px;
+            box-shadow: firebrick;
+        }
+
+        .row {
+            display: flex;
+            margin: 20px;
+        }
+
+        .leftcolumn, .rightcolumn {
+            flex: 50%;
+            padding: 10px;
+        }
+
+        .card {
+            background-color: rgb(247, 213, 213);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(151, 9, 9, 0.98);
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(151, 9, 9, 0.98);
+        }
+
+        .card2 {
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(151, 9, 9, 0.98);
+        }
+
+        .fakeimg {
+            background-color: #fffefe;
+            width: 100%;
+            padding: 1px;
+            height: 200px;
+        }
+
+        footer {
+            background-color: #ef8585;
+            color: rgb(148, 29, 29);
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav">
+        <img src="pixel pink heart.png" alt="Logo">
+        <div class="search-bar-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+        <div class="nav-right">
+            <a href="#">home</a>
+            <button class="about-button" onclick="scrollToAbout()">About</button>
+        </div>
+    </div>
+    
+    <div class="banner">
+        <h1>Welcome to Ponder-Talk</h1>
+        <p>Sharing my perspective</p>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <a href="giver&taker.html">
+                    <h2>The Taker's Perspective</h2>
+                    <h5>Title description, Jul 9, 2024</h5>
+                    <div class="fakeimg"></div>
+                    <p>giver's side...</p>
+                </a>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <a href="#">
+                    <h2>The Taker (more)</h2>
+                    <h5>Coming Soooooon</h5>
+                    <div class="fakeimg"></div>
+                    <p>Darkness feature of the human?</p>
+                </a>
+            </div>
+            <div class="card">
+                <h2>Article (un-named)</h2>
+                <h5>Article (coming soon)</h5>
+                <div class="fakeimg">Image</div>
+                <p>Coming soooooooon </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="section">
+        <div class="card2">
+            <h2>About Me</h2>
+            <p>I ponder and then I write here, I love thinking and that's why I made this, Thank You for visiting!</p>
+            <img src="emptyface.jpg" alt="About Me Image">
+        </div>
+    </div>
+
+    <footer>
+        Contact Information: Instagram: "Id= Ponder._.Tarts"
+    </footer>
+
+    <script>
+        function scrollToAbout() {
+            var aboutSection = document.getElementById('about');
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function performSearch() {
+            var searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            var pages = {
+                "the taker's side": "giver&taker.html",
+                "dependence": "giver&taker.html",
+                "emotional framework": "giver&taker.html",
+                "personal growth": "giver&taker.html",
+                "worthlessness": "giver&taker.html",
+                "mood dependence": "giver&taker.html",
+                "diminished value": "giver&taker.html",
+                "idealization": "giver&taker.html",
+                "neglect": "giver&taker.html",
+                "psychological framework": "giver&taker.html",
+                "reassurance": "giver&taker.html",
+                "boundary issues": "giver&taker.html"
+                // Add more key-value pairs for additional pages
+            };
+
+            if (searchQuery in pages) {
+                window.location.href = pages[searchQuery];
+            } else {
+                alert("No pages found for: " + searchQuery);
+            }
+        }
+    </script>
+</body>
+</html>
